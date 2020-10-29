@@ -42,7 +42,7 @@ public class Solution {
 
         Arrays.sort(people);
 
-        // 몸무게가 적게 나가는 사람 index
+        // 몸무게가 적게 나가는 사람 index//
         int index = 0;
         for(int i = people.length-1; i>=index; i--){
 
