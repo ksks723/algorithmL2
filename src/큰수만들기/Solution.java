@@ -12,9 +12,6 @@ class Solution {
         for (int i = 0; i < number.length(); i++) {
             list.add(number.charAt(i) - '0');
         }
-
-        System.out.println(list); //[1,2,3,1,2,3,4]
-
         for (int i = 1; i < list.size(); i++) {
             for (int j = 0; j < list.size(); j++) {
                 if (k == arr.size()) {
@@ -25,17 +22,20 @@ class Solution {
                 }
             }
         }
-
-        for(int i=0;i<list.size();i++){
-
-                if(i == arr.get(i)){
+        System.out.println(arr);
+        System.out.println(list);
+        int ar = 0;
+        for (int j = 0; j < list.size(); j++) { //[1,2,3,1,2,3,4]
+            if (ar < k) {
+                if (arr.get(ar) == j) {
+                    ar += 1;
                     continue;
-                }else{
-                    answer += list.get(i);
                 }
-
+            }
+            answer += list.get(j);
 
         }
+
         return answer;
     }
 
